@@ -1,5 +1,17 @@
 # Notes
 
+## Waarom TypeScript? wat is er mis met JavaScript?
+
+- alles?
+- JS is niet strongly-typed
+- JS geeft minder typezekerheid
+- TS geeft meer/betere autocomplete-support
+
+Compilers/transpilers
+
+transpiler   brontaal hetzelfde is als outputtaal
+- van JS naar Rust?
+
 ## Node.js folder als projectfolder wil inrichten
 
 Met npm:
@@ -47,6 +59,17 @@ Bun
 - TypeScript
 - $$$ venture capitalism
 - 2022
+
+
+## Variable declaration
+
+- `var` - lexical scope, hoisting applies
+  - zoveel mogelijk mijden
+- `let`/`const` block scope
+  - zoveel mogelijk gebruiken 👍
+- obscure manieren, hebben zeker niet de voorkeur:
+  - `x = 14;` zonder `var`/`let`/`const`, maakt een property aan op het globale object en wordt daarmee een globale variable
+  - `globalThis.x = 14;` maakt expliciet een property aan op het globale object en wordt daarmee een globale variable
 
 ## Coole links
 
