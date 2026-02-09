@@ -74,3 +74,4 @@ Bun
 ## Coole links
 
 - [State of JS survey 2025 is "uit"!](https://2025.stateofjs.com/en-US)
+- Hoisting leek gewoon een eigenaardig iets van `var`, maar zowaar zowaar, [Vitest past hoisting ook toe met `vi.mock()`](https://vitest.dev/guide/mocking)
