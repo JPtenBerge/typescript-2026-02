@@ -119,6 +119,40 @@ spyOn(obj, 'getal'); // niet prima: getal is geen functie
 
 Vanuit C#/Java is dit niet iets waar we generics voor inzetten. Het _lijkt_ niet typesafe, maar is het dus wel (mits goed toegepast natuurlijk).
 
+## Modules
+
+TypeScript moet rekening houden met meerdere doelgroepen qua hoe hij JS genereert op basis van jouw TS:
+
+- Node, zeker oude Node waar nog `require()` werd gebruikt in plaats van `import`
+- Browser, waar extensies verplicht zijn: `import { ... } from './bla.js';`
+- Bundlers, die zelf de imports willen verwerken/optimalizeren en dat TypeScript ze moet laten as-is
+
+Dit stuur je met de `module`-instelling.
+
+Buildtools / module bundlers:
+
+- Vite - snel dankzij pre-caching en HMR met ES Modules. Populairst tegenwoordig.
+  - gebruikt Rollup for productiebuilds, gebruikt esbuild for devbuilds
+- webpack - lange tijd populair. configureren is wat irritant. had geen HMR.
+- Rspack - new and improvement webpack, in Rust gebouwd, met lightning fast HMR
+- Rollup
+- Rolldown - Rust-implementatie van Rollup
+- Babel - close enough. Eigenlijk voornamelijk transpiler, maar wordt bijv. door Jest wel bundle-achtig ingezet
+- Parcel
+
+Oudere tools:
+
+- Grunt
+- Gulp
+- bower
+
+## JavaScript engines/runtimes
+
+- V8 - Google Chromium/Chrome / Node / Deno
+- SpiderMonkey  - Firefox
+- Chakra/ChakraCore   Internet Explorer / Edge
+- JavaScriptCore - Safari / Bun
+
 ## Coole links
 
 - [State of JS survey 2025 is "uit"!](https://2025.stateofjs.com/en-US)
