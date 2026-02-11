@@ -140,6 +140,14 @@ Buildtools / module bundlers:
 - Babel - close enough. Eigenlijk voornamelijk transpiler, maar wordt bijv. door Jest wel bundle-achtig ingezet
 - Parcel
 
+**Welke is 't beste?**
+
+- Geen, uiteraard
+- Sneller is fijner. Tools gebouwd in Rust/Go zijn doorgaans lekker snel.
+- HMR (Hot Module Replacement) is tegenwoordig een belangrijk iets. Vite deed dit goed en werd (mede) daardoor immens populair. webpack doet dit niet. De opvolger van webpack, Rspack, wel weer.
+  - HMR is dat je een codewijziging snel terugziet op het scherm
+- webpack was zeer configureerbaar en daarmee zeer krachtig. Maar was ook wat omslachtig hierdoor.
+
 Oudere tools:
 
 - Grunt
@@ -158,3 +166,4 @@ Oudere tools:
 - [State of JS survey 2025 is "uit"!](https://2025.stateofjs.com/en-US)
 - Hoisting leek gewoon een eigenaardig iets van `var`, maar zowaar zowaar, [Vitest past hoisting ook toe met `vi.mock()`](https://vitest.dev/guide/mocking)
 - [Proposal Type Annotations](https://github.com/tc39/proposal-type-annotations)
+- [Typed Hero](https://typehero.dev/explore), toffe TypeScript challenges
