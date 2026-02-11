@@ -1,5 +1,5 @@
 // import { Customer as Klant} from './customer';
-import {Customer} from './customer';
+import {Customer} from './customer.js';
 
 
 // Deno
@@ -13,3 +13,11 @@ cust.buy();
 function doeIets() {
     // import('./customerrrrrrrr') // lazy loading
 }
+
+// class B {}
+
+// class A extends B {
+
+// }
+
+// async function bla() {}

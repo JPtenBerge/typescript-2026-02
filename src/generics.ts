@@ -83,6 +83,11 @@ let obj = {
 };
 spyOn(obj, 'doe'); // prima
 
-spyOn(obj, 'getal'); // niet prima: getal is geen functie
+// spyOn(obj, 'getal'); // niet prima: getal is geen functie
 // spyOn(42, 'toExponential'); // niet prima
 // spyOn(obj, 'doeslkdfjdslkf'); // niet prima
+
+
+describe('qq', () => {
+	it()
+})
