@@ -42,17 +42,17 @@ console.log(langsteTekst.totNuToeHetLangste); // hatseflats
 // generics in functies definieren
 
 class Generator<T> {
-    value: T;
-    readonly func: (value: T) => T;
+	value: T;
+	readonly func: (value: T) => T;
 
-    constructor(initialValue: T, mijnNaampjeVoorEenFunctie: (value: T) => T) {
-        this.value = initialValue;
-        this.func = mijnNaampjeVoorEenFunctie;
-    }
+	constructor(initialValue: T, mijnNaampjeVoorEenFunctie: (value: T) => T) {
+		this.value = initialValue;
+		this.func = mijnNaampjeVoorEenFunctie;
+	}
 
-    next() {
-        this.value = this.func(this.value);
-    }
+	next() {
+		this.value = this.func(this.value);
+	}
 }
 
 let genGetallen = new Generator(0, huidigeValue => ++huidigeValue);
@@ -71,20 +71,17 @@ console.log(genPuntjes.value); // ...
 
 // this.http.get<Product[]>('api/product')
 
+//
 
-// 
-
-function spyOn<T extends object>(targetObj: T, methodName: keyof T) {
-    // targetObj[methodName] = () => {};
-
+function spyOn<T extends object, K extends keyof T>(targetObj: T, methodName: T[K] extends Function ? K : never) {
+	// targetObj[methodName] = () => {};
 }
 
 let obj = {
-    getal: 42,
-    doe() { }
+	getal: 42,
+	doe() {},
 };
 spyOn(obj, 'doe'); // prima
-
 
 spyOn(obj, 'getal'); // niet prima: getal is geen functie
 // spyOn(42, 'toExponential'); // niet prima
