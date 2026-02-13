@@ -8,6 +8,7 @@
 		// Environment Settings
 		// See also https://aka.ms/tsconfig/module
 		"module": "esnext",
+		"moduleResolution": "nodenext",
 		"target": "es5",
 		"types": [],
 		// For nodejs:
@@ -39,14 +40,9 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true
-	}
-	// "references": [
-	// 	{
-	// 		"path": "./tsconfig.app.json"
-	// 	},
-	// 	{
-	// 		"path": "./tsconfig.spec.json"
-	// 	}
-	// ]
+		"skipLibCheck": true,
+		"composite": true
+	},
+	"files": [],
+	"references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.spec.json" }]
 }

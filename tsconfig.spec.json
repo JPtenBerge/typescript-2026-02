@@ -2,7 +2,7 @@
     "extends": "./tsconfig.json",
     "compilerOptions": {
         "types": ["vitest/globals"],
-        "lib": ["ESNext"]
+        "module": "nodenext"
     },
     "include": ["src/**/*.d.ts", "src/**/*.spec.ts"]
 }
